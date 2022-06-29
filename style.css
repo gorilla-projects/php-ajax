@@ -3,5 +3,6 @@ body {
   background-color: brown;
 }
 h1 {
-  padding:20px;
+
+  margin: 3px;
 }
