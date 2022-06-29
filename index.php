@@ -32,8 +32,8 @@ $dotenv->load();
         <div class="row">
             <div class="col-12">
                 <form action="form.php" method="POST" onsubmit="return false">
-                    <input type="text" name="first_name" placeholder="Voornaam" id="first_name">
-                    <input type="text" name="last_name" placeholder="Achternaam" id="last_name">
+                    <input type="text" name="first_name" placeholder="Voornaam" id="first-name">
+                    <input type="text" name="last_name" placeholder="Achternaam" id="last-name">
                     <input type="submit" value="Save" id="btn-save">
                 </form>
             </div>
@@ -45,6 +45,7 @@ $dotenv->load();
         window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
         let firstName = document.getElementById('first-name');
+        let lastName = document.getElementById('last-name');
         let errorMessage = document.getElementById('error-message');
 
         // Add an event listner on the submit button and execute AJAX (axios) call
@@ -52,8 +53,8 @@ $dotenv->load();
         but.addEventListener('click', function() {
             formInput = new FormData();
 
-            formInput.append('first_name', document.getElementById('first_name').value);
-            formInput.append('last_name', document.getElementById('last_name').value);
+            formInput.append('first_name', firstName.value);
+            formInput.append('last_name', lastName.value);
 
             axios({
                 url: 'form.php', // sent to...
