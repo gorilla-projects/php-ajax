@@ -20,7 +20,7 @@ $dotenv->load();
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/node_modules/axios/dist/axios.min.js"></script>
 
-    <title>Document</title>
+    <title>Mijn Document</title>
 </head>
 <body>
     <h1 id="first-name">What's your name?</h1>
