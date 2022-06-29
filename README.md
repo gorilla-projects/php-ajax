@@ -2,7 +2,7 @@
 
 Use a simple and small framework and use AJAX to send data.
 
-##Installation
+#Installation
 
 - Run composer install
 - Run npm install
