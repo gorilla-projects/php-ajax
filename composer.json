@@ -1,0 +1,22 @@
+{
+    "name": "toby/framework",
+    "description": "Test framework",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Toby Versteeg",
+            "email": "toby@codegorilla.nl"
+        }
+    ],
+    "autoload": {
+
+        "classmap": [
+
+            "./"
+
+        ]
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
