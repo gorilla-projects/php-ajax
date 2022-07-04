@@ -23,7 +23,7 @@ $dotenv->load();
     <title>Mijn Document</title>
 </head>
 <body>
-    <h1 id="first-name">What's your name?</h1>
+    <h1 id="show-name">What's your name?</h1>
     <div class="container">
         <div class="row">
             <div id="error-message" class="col-12" style="color: red;"></div>
@@ -44,6 +44,7 @@ $dotenv->load();
         // Set headers to AJAX call for all axios calls
         window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+        let showName = document.getElementById('show-name');
         let firstName = document.getElementById('first-name');
         let lastName = document.getElementById('last-name');
         let errorMessage = document.getElementById('error-message');
@@ -65,7 +66,7 @@ $dotenv->load();
             }).then(function(response) {
                 // Response from backend
                 if (response.data.success) {                    
-                    firstName.innerHTML = 'Your name is "' + response.data.message + '"';
+                    showName.innerHTML = 'Your name is "' + response.data.message + '"';
                     errorMessage.innerHTML = '';
                 } else {
                     // Something went wrong
